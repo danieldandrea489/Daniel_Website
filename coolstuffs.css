@@ -1,0 +1,756 @@
+/* =======================
+   BODY & GLOBAL STYLES
+   ======================= */
+/* Make the body a flex container in column direction */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full viewport height */
+    margin: 0;
+    font-family: 'Russo One', Arial;
+}
+
+/* Let the content wrapper grow to fill space */
+.content-wrapper {
+    flex: 1; /* fills available space above the footer */
+}
+
+/* =======================
+   NAVBAR
+   ======================= */
+nav.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  border-radius: 4px;
+  animation: fadeInSmooth 1s forwards;
+  animation-delay: 0s;
+}
+
+nav.navbar ul {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+nav.navbar li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  padding: 15px;
+}
+
+nav.navbar li:hover {
+  background-color: gray;
+  box-shadow: 5px 8px 12px 4px rgba(90, 88, 88, 0.3);
+}
+
+nav.navbar li.no-shadow:hover {
+  background-color: black;
+  box-shadow: none;
+}
+
+nav.navbar li.no-shadow {
+  font-size: 50px;
+  color: red;
+  cursor: auto;
+  font-family: 'Creepster', Arial;
+}
+
+/* =======================
+   TEXT ELEMENTS / INTRO
+   ======================= */
+.text-elements {
+  opacity: 0;
+  color: white;
+  animation: fadeInSmooth 1s forwards;
+  animation-delay: 1s;
+}
+
+.About-class {
+  opacity: 0;
+  color: white;
+  animation: fadeInSmooth 1s forwards;
+  animation-delay: 1s;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+
+.intro-text-stuff1 {
+  font-family: 'Russo One', Arial;
+  font-size: 25px;
+  width: 0;
+  margin-left: 140px;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  animation: typing 6s steps(88) forwards;
+}
+
+.intro-text-stuff2 {
+  font-family: 'Russo One', Arial;
+  font-size: 25px;
+  width: 0;
+  margin-left: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  animation: typing2 6s steps(64) forwards;
+  animation-delay: 4s;
+}
+
+.intro-text-stuff3 {
+  font-family: 'Russo One', Arial;
+  font-size: 25px;
+  width: 0;
+  margin-left: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  animation: typing3 6s steps(57) forwards;
+  animation-delay: 8s;
+}
+
+/* =======================
+   BUTTONS
+   ======================= */
+.button-class {
+  font-family: 'Russo One', Arial;
+  margin-left: 600px;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 8px;
+  opacity: 0;
+  letter-spacing: 1px;
+  background-color: black;
+  color: white;
+  animation: fadeInSmooth 1s forwards;
+  animation-delay: 13s;
+}
+
+.button-class:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: gray;
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* =======================
+   TITLES & NAMES
+   ======================= */
+.title {
+  margin-top: 20px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.name {
+  margin-top: 20px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.links-intro {
+  text-align: center;
+}
+
+.links-intro a {
+  font-size: 15px;
+  color: black;
+}
+
+/* =======================
+   EDUCATION / EXPERIENCE
+   ======================= */
+.education h2 {
+  font-size: 25px;
+}
+
+.school {
+  display: inline;
+}
+
+.graduation {
+  font-size: 15px;
+  display: inline;
+  margin-left: 950px;
+}
+
+.degree-GPA {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.degree {
+  font-size: 15px;
+}
+
+.GPA {
+  font-size: 15px;
+  margin-right: 50px;
+}
+
+.Courses {
+  margin-bottom: 20px;
+}
+
+.course {
+  display: flex;
+}
+
+.classes {
+  color: gray;
+  flex: 1;
+  display: inline;
+}
+
+.Rockwood {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.grounds {
+  font-size: 19px;
+}
+
+.date {
+  font-size: 15px;
+  margin-right: 50px;
+}
+
+.titles {
+  font-size: 15px;
+}
+
+.responsibilities {
+  font-size: 10px;
+  color: gray;
+}
+
+/* =======================
+   WORK EXPERIENCE
+   ======================= */
+.Culvers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.crews {
+  font-size: 19px;
+}
+
+.times {
+  font-size: 15px;
+  margin-right: 50px;
+}
+
+.tags {
+  display: flex;
+}
+
+.tag-element {
+  background-color: green;
+  color: #ffeb3a;
+  border-radius: 8px;
+  margin-left: 2px;
+}
+
+.Activities ul li {
+  margin-bottom: 8px;
+}
+
+.Activities ul li strong {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+}
+
+/* =======================
+   CONTACT PAGE
+   ======================= */
+.Contact-stuff {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Contact-images {
+  display: flex;
+  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contact-images img {
+  height: 75px;
+  width: 75px;
+  object-fit: cover;
+  margin-right: 100px;
+  cursor: pointer;
+}
+
+/* =======================
+   ABOUT PAGE ELEMENTS
+   ======================= */
+.elemental {
+  flex: 1;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.elemental p {
+  margin-bottom: 20px;
+}
+
+.elemental img {
+  width: 100%;
+  height: 100%;
+}
+
+/* =======================
+   FORMS
+   ======================= */
+form {
+  width: 420px;
+  margin: 50px auto;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: black;
+  border: 3px solid #6c63ff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #6c63ff, 0 0 25px rgba(108, 99, 255, 0.3);
+  font-family: 'Russo One', Arial, sans-serif;
+  color: white;
+}
+
+form h1 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 22px;
+  color: #a8b8ff;
+  text-shadow: 0 0 8px #111112;
+}
+
+input, textarea {
+  padding: 12px;
+  background: #0f0f17;
+  border: 2px solid #444;
+  border-radius: 6px;
+  font-size: 14px;
+  color: white;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 10px #6c63ff;
+}
+
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button[type="reset"] {
+  background: #444;
+  color: #ddd;
+  border: 2px solid #666;
+}
+
+button[type="reset"]:hover {
+  background: #555;
+  box-shadow: 0 0 8px #aaa;
+}
+
+button[type="submit"] {
+  background: #6c63ff;
+  color: white;
+  border: 2px solid #8d86ff;
+}
+
+button[type="submit"]:hover {
+  box-shadow: 0 0 14px #8d86ff;
+}
+
+select.types {
+  padding: 12px;
+  background: #0f0f17;
+  border: 2px solid #444;
+  border-radius: 6px;
+  font-size: 14px;
+  color: white;
+  font-family: 'Russo One', Arial, sans-serif;
+}
+
+select.types:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 10px #6c63ff;
+  outline: none;
+}
+
+/* =======================
+   PAGE BACKGROUNDS
+   ======================= */
+.home-page {
+  background: linear-gradient(155deg, #2b1055, #cd04cd, #252424);
+}
+
+.about-page {
+  background: linear-gradient(135deg, #004e92, #651fff, #0d00ff);
+}
+
+.resume-page {
+  background: linear-gradient(135deg, #211e1e, #433e3e, #394c6a);
+}
+
+.contact-page {
+  background: linear-gradient(135deg, #0c57a3, #00ffe0, #053657);
+}
+
+.running-page {
+  background: linear-gradient(135deg, #2b1055, #ff33ff, #0a000a);
+}
+
+.start-body {
+  background-image: url("images/G5qSWB.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* =======================
+   SKILLS / BUTTONS
+   ======================= */
+.skillset {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.specific-skill {
+  justify-content: center;
+  flex: 0 0 auto;
+  margin-left: 20px;
+  width: auto;
+  background-color: white;
+  color: #000000;
+  border: 2px solid #00ffaa;
+  border-radius: 8px;
+  padding: 14px 18px;
+  box-shadow: 0px 0px 24px 8px rgba(10, 233, 80, 0.4);
+}
+
+.specific-skill:hover {
+  transform: scale(1.07);
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.learn-more-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.learn-more-text {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: blue;
+  border-radius: 8px;
+  color: white;
+}
+
+.learn-more-text p {
+  padding: 0;
+  margin: 0;
+}
+
+.learn-more-text:hover {
+  transform: scale(1.07);
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* =======================
+   RUNNING / STATS
+   ======================= */
+.running-blurb {
+  display: flex;
+  width: 50%;
+  margin-bottom: 25px;
+  margin-left: 20px;
+}
+
+.Running-PRs {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.Run-Pr-1 {
+  flex: 1;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #1414f3;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+.Run-Pr-1 p {
+  text-align: center;
+}
+
+.Run-Pr-1:hover {
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
+  transform: translateY(5px) scale(1.05);
+}
+
+.event-name {
+  font-size: 12px;
+  font-family: 'Russo One', Arial;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.event-time {
+  margin-top: 5px;
+  font-size: 25px;
+  font-family: 'Russo One', Arial;
+  color: rgb(255, 255, 255);
+}
+
+/* =======================
+   RUNNING LESSONS & RACES
+   ======================= */
+.running-lessons {
+  display: flex;
+  margin-bottom: 20px;
+  width: 98%;
+}
+
+.lesson-attributes {
+  width: 50%;
+  height: 350px;
+  padding-left: 20px;
+  margin-left: 20px;
+  color: white;
+  border: 1px solid #1414f3;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+.lesson-attributes li {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.lesson-attributes ul {
+  list-style-position: outside;
+  padding-left: 1.2em;
+}
+
+.Upcoming-Races {
+  display: flex;
+  margin-bottom: 20px;
+  width: 98%;
+}
+
+.Races {
+  width: 50%;
+  height: 250px;
+  padding-left: 20px;
+  margin-left: 20px;
+  color: white;
+  border: 1px solid #1414f3;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* =======================
+   ACHIEVEMENTS
+   ======================= */
+.achievements-style {
+  display: flex;
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.specific-achievement {
+  flex: 1;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #1414f3;
+  padding-right: 10px;
+  padding-top: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+  height: 90px;
+}
+
+.specific-achievement p {
+  margin: 0;
+  text-align: center;
+}
+
+.elements-achievement {
+  margin-top: 5px;
+  font-size: 25px;
+  font-family: 'Russo One', Arial;
+  color: rgb(255, 255, 255);
+}
+
+.specific-achievement:hover {
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
+  transform: translateY(5px) scale(1.05);
+}
+
+/* =======================
+   RESUME & RUNNING SECTIONS
+   ======================= */
+.Resume-Running {
+  display: flex;
+  margin-left: 32%;
+  margin-right: 32%;
+  margin-bottom: 5%;
+}
+
+.Resume-section {
+  flex: 1;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #1414f3;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-left: 20px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+.Resume-section:hover {
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
+  transform: translateY(5px) scale(1.05);
+}
+
+.Running-section {
+  flex: 1;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #1414f3;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-left: 20px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+.Running-section:hover {
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
+  transform: translateY(5px) scale(1.05);
+}
+
+/* =======================
+   FOOTER
+   ======================= */
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color:rgb(0, 0, 0);
+  width: 100%;
+  margin: 0;
+  align-items: center;
+  padding-left: 30px;
+  opacity: 0;
+  animation: fadeInSmooth 1s forwards;
+  animation-delay: 2s;
+}
+
+.footer-element {
+  display: flex;
+  padding-right: 30px;
+}
+
+.footer-image {
+  position: relative;
+  display: flex;
+}
+
+.footer-image img {
+  flex: 1;
+  height: 55px;
+  width: 55px;
+  padding-right: 20px;
+  display: inline;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+a[href^="mailto:"] {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+/* =======================
+   KEYFRAMES
+   ======================= */
+@keyframes fadeInSmooth {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 88ch; }
+}
+
+@keyframes typing2 {
+  from { width: 0; }
+  to { width: 64ch; }
+}
+
+@keyframes typing3 {
+  from { width: 0; }
+  to { width: 57ch; }
+}
+
+/* =======================
+   ACTIVE PAGE LINK
+   ======================= */
+.active-page a {
+  color: green !important;
+}
+
+/* =======================
+   LIST STYLING
+   ======================= */
+ul {
+  display: block;
+  list-style: disc inside;
+  margin: 1em 0;
+  padding-left: 40px;
+}
+
+li {
+  display: list-item;
+  font-size: 12px;
+  color: gray;
+}
