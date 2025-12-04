@@ -762,6 +762,18 @@ li {
     flex-wrap: wrap; /* Allow items to stack if needed */
   }
 
+   body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full viewport height */
+    margin: 0;
+    font-family: 'Russo One', Arial;
+}
+
+/* Let the content wrapper grow to fill space */
+.content-wrapper {
+    flex: 1; /* fills available space above the footer */
+}
   nav.navbar li {
     font-size: 18px;
     padding: 8px;
