@@ -754,74 +754,90 @@ li {
   font-size: 12px;
   color: gray;
 }
-/* Small devices (mobile phones, up to 600px) */
 @media (max-width: 600px) {
+  /* Navbar adjustments */
   nav.navbar {
     height: auto;
-  }
-  nav.navbar li {
-    font-size: 20px;
-    padding: 10px;
-  }
-  nav.navbar li.no-shadow {
-    font-size: 35px;
+    flex-wrap: wrap; /* Allow items to stack if needed */
   }
 
+  nav.navbar li {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  nav.navbar li.no-shadow {
+    font-size: 28px;
+  }
+
+  /* Intro text adjustments */
   .intro-text-stuff1,
   .intro-text-stuff2,
   .intro-text-stuff3 {
     margin-left: 10px;
-    font-size: 18px;
-  }
-
-  .button-class {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    padding: 15px;
+    margin-right: 10px;
     font-size: 16px;
+    white-space: normal; /* Allow wrapping */
+    width: auto; /* Fill available space */
   }
 
+  /* Button adjustments */
+  .button-class {
+    margin: 30px auto 50px auto; /* Center horizontally with spacing */
+    padding: 12px;
+    font-size: 16px;
+    display: block;
+  }
+
+  /* Title / Name adjustments */
   .title {
-    font-size: 28px;
+    font-size: 24px;
     margin-top: 15px;
   }
 
   .name {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 10px;
   }
 
-  .graduation {
+  /* Education / Experience adjustments */
+  .graduation,
+  .GPA {
     margin-left: 0;
+    margin-right: 0;
     display: block;
+    text-align: left;
     margin-top: 5px;
   }
 
-  .GPA {
-    margin-right: 0;
-  }
-
+  /* Contact page adjustments */
   .Contact-images {
     flex-direction: column;
-    margin-left: 0;
+    align-items: center;
+    margin: 10px 0;
   }
 
   .Contact-images img {
     margin: 10px 0;
+    max-width: 70%; /* prevent overflow */
+    height: auto;
   }
 
+  /* About page adjustments */
   .elemental {
     flex-direction: column;
-    margin: 10px 0;
+    margin: 10px 5px;
+    width: 100%;
   }
 
+  /* Form adjustments */
   form {
-    width: 90%;
-    margin: 30px auto;
+    width: 95%;
+    margin: 20px auto;
     padding: 15px;
   }
 
+  /* Skills adjustments */
   .skillset {
     flex-direction: column;
     align-items: center;
@@ -829,16 +845,18 @@ li {
 
   .specific-skill {
     margin: 10px 0;
+    width: 90%;
+    max-width: 350px;
   }
 
+  /* Running / Achievements / Resume sections */
   .running-blurb,
   .running-lessons,
   .Upcoming-Races,
   .achievements-style,
   .Resume-Running {
     flex-direction: column;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 10px 0;
     width: 100%;
   }
 
@@ -848,19 +866,28 @@ li {
   .specific-achievement,
   .Resume-section,
   .Running-section {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+    margin: 10px auto;
+    width: 95%;
   }
 
+  /* Footer adjustments */
   footer {
     flex-direction: column;
     align-items: center;
-    padding-left: 0;
-    padding-bottom: 15px;
+    padding: 15px 10px;
+    text-align: center;
   }
-}
 
+  .footer-element {
+    margin: 5px 0;
+  }
+
+  .footer-image img {
+    margin: 5px 0;
+    width: 50px;
+    height: 50px;
+  }
+} 
 /* Medium devices (tablets, 600px–1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
   nav.navbar li {
