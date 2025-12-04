@@ -758,6 +758,7 @@ li {
   /* Navbar adjustments */
   nav.navbar {
     height: auto;
+    width:100%;
     flex-wrap: wrap; /* Allow items to stack if needed */
   }
 
