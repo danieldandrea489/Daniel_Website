@@ -754,3 +754,174 @@ li {
   font-size: 12px;
   color: gray;
 }
+/* Small devices (mobile phones, up to 600px) */
+@media (max-width: 600px) {
+  nav.navbar {
+    height: auto;
+  }
+  nav.navbar li {
+    font-size: 20px;
+    padding: 10px;
+  }
+  nav.navbar li.no-shadow {
+    font-size: 35px;
+  }
+
+  .intro-text-stuff1,
+  .intro-text-stuff2,
+  .intro-text-stuff3 {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+
+  .button-class {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-top: 15px;
+  }
+
+  .name {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .graduation {
+    margin-left: 0;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .GPA {
+    margin-right: 0;
+  }
+
+  .Contact-images {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .Contact-images img {
+    margin: 10px 0;
+  }
+
+  .elemental {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  form {
+    width: 90%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  .skillset {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .specific-skill {
+    margin: 10px 0;
+  }
+
+  .running-blurb,
+  .running-lessons,
+  .Upcoming-Races,
+  .achievements-style,
+  .Resume-Running {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .Run-Pr-1,
+  .lesson-attributes,
+  .Races,
+  .specific-achievement,
+  .Resume-section,
+  .Running-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-bottom: 15px;
+  }
+}
+
+/* Medium devices (tablets, 600px–1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  nav.navbar li {
+    font-size: 25px;
+    padding: 12px;
+  }
+
+  .intro-text-stuff1,
+  .intro-text-stuff2,
+  .intro-text-stuff3 {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .button-class {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    padding: 18px;
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+
+  .graduation {
+    margin-left: 20px;
+  }
+
+  .GPA {
+    margin-right: 20px;
+  }
+
+  .Contact-images {
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+
+  .running-blurb,
+  .running-lessons,
+  .Upcoming-Races,
+  .achievements-style,
+  .Resume-Running {
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .Run-Pr-1,
+  .lesson-attributes,
+  .Races,
+  .specific-achievement,
+  .Resume-section,
+  .Running-section {
+    width: 45%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
