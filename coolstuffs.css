@@ -1,19 +1,20 @@
-
 /* =======================
    BODY & GLOBAL STYLES
    ======================= */
-/* Make the body a flex container in column direction */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* full viewport height */
-    margin: 0;
-    font-family: 'Russo One', Arial;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Russo One', Arial, sans-serif;
+  color: white;
 }
 
-/* Let the content wrapper grow to fill space */
 .content-wrapper {
-    flex: 1; /* fills available space above the footer */
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* =======================
@@ -21,40 +22,41 @@ body {
    ======================= */
 nav.navbar {
   width: 100%;
-  height: 100px;
   background-color: black;
   border-radius: 4px;
   animation: fadeInSmooth 1s forwards;
-  animation-delay: 0s;
 }
 
 nav.navbar ul {
   display: flex;
-  width: 100%;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-nav.navbar a {
-  color: white;
-  text-decoration: none;
-}
+nav.navbar a { color: white; text-decoration: none; }
 
 nav.navbar li {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 35px;
+  padding: 0.5rem;
+  font-size: 2rem;
   cursor: pointer;
-  padding: 15px;
+}
+
+nav.navbar li.no-shadow {
+  font-family: 'Creepster', Arial;
+  font-size: 2.5rem;
+  color: red;
+  cursor: auto;
 }
 
 nav.navbar li:hover {
   background-color: gray;
-  box-shadow: 5px 8px 12px 4px rgba(90, 88, 88, 0.3);
+  box-shadow: 0.3rem 0.5rem 0.75rem rgba(90, 88, 88, 0.3);
 }
 
 nav.navbar li.no-shadow:hover {
@@ -62,245 +64,115 @@ nav.navbar li.no-shadow:hover {
   box-shadow: none;
 }
 
-nav.navbar li.no-shadow {
-  font-size: 50px;
-  color: red;
-  cursor: auto;
-  font-family: 'Creepster', Arial;
-}
-
 /* =======================
-   TEXT ELEMENTS / INTRO
+   INTRO TEXT
    ======================= */
-.text-elements {
-  opacity: 0;
-  color: white;
-  animation: fadeInSmooth 1s forwards;
-  animation-delay: 1s;
-}
-
 .About-class {
-  opacity: 0;
-  color: white;
-  animation: fadeInSmooth 1s forwards;
-  animation-delay: 1s;
   display: flex;
-  flex-direction: row;
-  height: 100vh;
+  flex-direction: column;
   width: 100%;
+  padding: 1rem;
+  animation: fadeInSmooth 1s forwards;
 }
 
-.intro-text-stuff1 {
-  font-family: 'Russo One', Arial;
-  font-size: 25px;
-  width: 0;
-  margin-left: 140px;
-  overflow: hidden;
-  white-space: nowrap;
-  color: white;
-  animation: typing 6s steps(88) forwards;
-}
-
-.intro-text-stuff2 {
-  font-family: 'Russo One', Arial;
-  font-size: 25px;
-  width: 0;
-  margin-left: 250px;
-  overflow: hidden;
-  white-space: nowrap;
-  color: white;
-  animation: typing2 6s steps(64) forwards;
-  animation-delay: 4s;
-}
-
+.intro-text-stuff1,
+.intro-text-stuff2,
 .intro-text-stuff3 {
   font-family: 'Russo One', Arial;
-  font-size: 25px;
-  width: 0;
-  margin-left: 250px;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
   overflow: hidden;
   white-space: nowrap;
-  color: white;
-  animation: typing3 6s steps(57) forwards;
-  animation-delay: 8s;
 }
+
+.intro-text-stuff1 { animation: typing 6s steps(88) forwards; }
+.intro-text-stuff2 { animation: typing2 6s steps(64) forwards; animation-delay: 4s; }
+.intro-text-stuff3 { animation: typing3 6s steps(57) forwards; animation-delay: 8s; }
 
 /* =======================
    BUTTONS
    ======================= */
 .button-class {
-  font-family: 'Russo One', Arial;
-  margin-left: 600px;
-  margin-top: 100px;
-  padding: 20px;
-  border-radius: 8px;
-  opacity: 0;
-  letter-spacing: 1px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
   background-color: black;
   color: white;
+  letter-spacing: 1px;
+  display: block;
+  opacity: 0;
   animation: fadeInSmooth 1s forwards;
   animation-delay: 13s;
+  text-align: center;
 }
 
 .button-class:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
   background-color: gray;
-  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.625rem 1.125rem rgba(0, 0, 0, 0.4);
 }
 
 /* =======================
-   TITLES & NAMES
+   TITLES / NAME
    ======================= */
-.title {
-  margin-top: 20px;
-  font-size: 40px;
-  text-align: center;
-}
-
-.name {
-  margin-top: 20px;
-  font-size: 25px;
-  text-align: center;
-}
-
-.links-intro {
-  text-align: center;
-}
-
-.links-intro a {
-  font-size: 15px;
-  color: black;
-}
+.title { font-size: 2rem; text-align: center; margin-top: 1rem; }
+.name  { font-size: 1.25rem; text-align: center; margin-top: 0.5rem; }
+.links-intro a { font-size: 0.9rem; color: black; text-decoration: none; }
 
 /* =======================
-   EDUCATION / EXPERIENCE
+   EDUCATION & EXPERIENCE
    ======================= */
-.education h2 {
-  font-size: 25px;
-}
-
-.school {
-  display: inline;
-}
-
-.graduation {
-  font-size: 15px;
-  display: inline;
-  margin-left: 950px;
-}
-
-.degree-GPA {
+.degree-GPA,
+.Rockwood,
+.Culvers {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  margin: 0.5rem 0;
 }
 
-.degree {
-  font-size: 15px;
-}
-
-.GPA {
-  font-size: 15px;
-  margin-right: 50px;
-}
-
-.Courses {
-  margin-bottom: 20px;
-}
-
-.course {
-  display: flex;
-}
-
-.classes {
-  color: gray;
-  flex: 1;
-  display: inline;
-}
-
-.Rockwood {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.grounds {
-  font-size: 19px;
-}
-
-.date {
-  font-size: 15px;
-  margin-right: 50px;
-}
-
-.titles {
-  font-size: 15px;
+.degree, .GPA, .school, .graduation, .grounds, .date, .titles, .crews, .times {
+  flex: 1 1 45%;
+  margin: 0.25rem;
+  font-size: 0.9rem;
 }
 
 .responsibilities {
-  font-size: 10px;
+  font-size: 0.8rem;
   color: gray;
 }
 
-/* =======================
-   WORK EXPERIENCE
-   ======================= */
-.Culvers {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.crews {
-  font-size: 19px;
-}
-
-.times {
-  font-size: 15px;
-  margin-right: 50px;
-}
-
-.tags {
-  display: flex;
+.Courses, .course, .classes, .tags, .tag-element {
+  flex-wrap: wrap;
+  margin: 0.25rem 0;
 }
 
 .tag-element {
   background-color: green;
   color: #ffeb3a;
   border-radius: 8px;
-  margin-left: 2px;
-}
-
-.Activities ul li {
-  margin-bottom: 8px;
-}
-
-.Activities ul li strong {
-  color: rgb(255, 255, 255);
-  font-size: 14px;
+  margin: 2px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
 }
 
 /* =======================
-   CONTACT PAGE
+   CONTACT
    ======================= */
-.Contact-stuff {
-  text-align: center;
-  margin-bottom: 20px;
-}
+.Contact-stuff { text-align: center; margin-bottom: 1rem; }
 
 .Contact-images {
   display: flex;
-  margin-left: 100px;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  gap: 1rem;
 }
 
 .Contact-images img {
-  height: 75px;
   width: 75px;
+  height: 75px;
   object-fit: cover;
-  margin-right: 100px;
   cursor: pointer;
 }
 
@@ -308,363 +180,96 @@ nav.navbar li.no-shadow {
    ABOUT PAGE ELEMENTS
    ======================= */
 .elemental {
-  flex: 1;
-  height: 100%;
-  margin-bottom: 20px;
-}
-
-.elemental p {
-  margin-bottom: 20px;
+  flex: 1 1 100%;
+  margin: 0.5rem 0;
 }
 
 .elemental img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 /* =======================
    FORMS
    ======================= */
 form {
-  width: 420px;
-  margin: 50px auto;
-  padding: 25px;
+  width: 90%;
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 1rem;
   background: black;
   border: 3px solid #6c63ff;
   border-radius: 12px;
   box-shadow: 0 0 12px #6c63ff, 0 0 25px rgba(108, 99, 255, 0.3);
-  font-family: 'Russo One', Arial, sans-serif;
-  color: white;
 }
 
-form h1 {
-  text-align: center;
-  margin-bottom: 5px;
-  font-size: 22px;
-  color: #a8b8ff;
-  text-shadow: 0 0 8px #111112;
-}
-
-input, textarea {
-  padding: 12px;
+input, textarea, select.types {
+  padding: 0.75rem;
   background: #0f0f17;
   border: 2px solid #444;
   border-radius: 6px;
-  font-size: 14px;
   color: white;
+  font-size: 1rem;
 }
 
-input:focus,
-textarea:focus {
-  border-color: #6c63ff;
-  box-shadow: 0 0 10px #6c63ff;
-}
-
-button {
-  padding: 14px;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button[type="reset"] {
-  background: #444;
-  color: #ddd;
-  border: 2px solid #666;
-}
-
-button[type="reset"]:hover {
-  background: #555;
-  box-shadow: 0 0 8px #aaa;
-}
-
-button[type="submit"] {
-  background: #6c63ff;
-  color: white;
-  border: 2px solid #8d86ff;
-}
-
-button[type="submit"]:hover {
-  box-shadow: 0 0 14px #8d86ff;
-}
-
-select.types {
-  padding: 12px;
-  background: #0f0f17;
-  border: 2px solid #444;
-  border-radius: 6px;
-  font-size: 14px;
-  color: white;
-  font-family: 'Russo One', Arial, sans-serif;
-}
-
-select.types:focus {
+input:focus, textarea:focus, select.types:focus {
   border-color: #6c63ff;
   box-shadow: 0 0 10px #6c63ff;
   outline: none;
 }
 
-/* =======================
-   PAGE BACKGROUNDS
-   ======================= */
-.home-page {
-  background: linear-gradient(155deg, #2b1055, #cd04cd, #252424);
-}
-
-.about-page {
-  background: linear-gradient(135deg, #004e92, #651fff, #0d00ff);
-}
-
-.resume-page {
-  background: linear-gradient(135deg, #211e1e, #433e3e, #394c6a);
-}
-
-.contact-page {
-  background: linear-gradient(135deg, #0c57a3, #00ffe0, #053657);
-}
-
-.running-page {
-  background: linear-gradient(135deg, #2b1055, #ff33ff, #0a000a);
-}
-
-.start-body {
-  background-image: url("images/G5qSWB.webp");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+button {
+  padding: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 /* =======================
-   SKILLS / BUTTONS
+   SKILLS / ACHIEVEMENTS / RUNNING
    ======================= */
-.skillset {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 25px;
-}
-
-.specific-skill {
-  justify-content: center;
-  flex: 0 0 auto;
-  margin-left: 20px;
-  width: auto;
-  background-color: white;
-  color: #000000;
-  border: 2px solid #00ffaa;
-  border-radius: 8px;
-  padding: 14px 18px;
-  box-shadow: 0px 0px 24px 8px rgba(10, 233, 80, 0.4);
-}
-
-.specific-skill:hover {
-  transform: scale(1.07);
-  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.4);
-}
-
-.learn-more-button {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 25px;
-}
-
-.learn-more-text {
-  padding: 10px 20px;
-  font-size: 20px;
-  background-color: blue;
-  border-radius: 8px;
-  color: white;
-}
-
-.learn-more-text p {
-  padding: 0;
-  margin: 0;
-}
-
-.learn-more-text:hover {
-  transform: scale(1.07);
-  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* =======================
-   RUNNING / STATS
-   ======================= */
-.running-blurb {
-  display: flex;
-  width: 50%;
-  margin-bottom: 25px;
-  margin-left: 20px;
-}
-
-.Running-PRs {
-  display: flex;
-  margin-bottom: 15px;
-}
-
-.Run-Pr-1 {
-  flex: 1;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border: 1px solid #1414f3;
-  padding-right: 10px;
-  padding-top: 10px;
-  margin-right: 20px;
-  margin-left: 20px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
-}
-
-.Run-Pr-1 p {
-  text-align: center;
-}
-
-.Run-Pr-1:hover {
-  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
-  transform: translateY(5px) scale(1.05);
-}
-
-.event-name {
-  font-size: 12px;
-  font-family: 'Russo One', Arial;
-  color: white;
-  margin-bottom: 0px;
-}
-
-.event-time {
-  margin-top: 5px;
-  font-size: 25px;
-  font-family: 'Russo One', Arial;
-  color: rgb(255, 255, 255);
-}
-
-/* =======================
-   RUNNING LESSONS & RACES
-   ======================= */
-.running-lessons {
-  display: flex;
-  margin-bottom: 20px;
-  width: 98%;
-}
-
-.lesson-attributes {
-  width: 50%;
-  height: 350px;
-  padding-left: 20px;
-  margin-left: 20px;
-  color: white;
-  border: 1px solid #1414f3;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
-}
-
-.lesson-attributes li {
-  color: white;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.lesson-attributes ul {
-  list-style-position: outside;
-  padding-left: 1.2em;
-}
-
-.Upcoming-Races {
-  display: flex;
-  margin-bottom: 20px;
-  width: 98%;
-}
-
-.Races {
-  width: 50%;
-  height: 250px;
-  padding-left: 20px;
-  margin-left: 20px;
-  color: white;
-  border: 1px solid #1414f3;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
-}
-
-/* =======================
-   ACHIEVEMENTS
-   ======================= */
-.achievements-style {
-  display: flex;
-  width: 70%;
-  margin-bottom: 20px;
-}
-
-.specific-achievement {
-  flex: 1;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border: 1px solid #1414f3;
-  padding-right: 10px;
-  padding-top: 5px;
-  margin-right: 20px;
-  margin-left: 20px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
-  height: 90px;
-}
-
-.specific-achievement p {
-  margin: 0;
-  text-align: center;
-}
-
-.elements-achievement {
-  margin-top: 5px;
-  font-size: 25px;
-  font-family: 'Russo One', Arial;
-  color: rgb(255, 255, 255);
-}
-
-.specific-achievement:hover {
-  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
-  transform: translateY(5px) scale(1.05);
-}
-
-/* =======================
-   RESUME & RUNNING SECTIONS
-   ======================= */
+.skillset,
+.running-blurb,
+.running-lessons,
+.Upcoming-Races,
+.achievements-style,
 .Resume-Running {
   display: flex;
-  margin-left: 32%;
-  margin-right: 32%;
-  margin-bottom: 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-.Resume-section {
-  flex: 1;
-  margin-bottom: 15px;
+.specific-skill,
+.lesson-attributes,
+.Races,
+.specific-achievement,
+.Resume-section,
+.Running-section,
+.Run-Pr-1 {
+  flex: 1 1 300px;
+  min-width: 250px;
+  margin: 0.5rem;
   border-radius: 10px;
   border: 1px solid #1414f3;
-  padding-right: 10px;
-  padding-top: 10px;
-  margin-left: 20px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.4);
 }
 
-.Resume-section:hover {
-  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
-  transform: translateY(5px) scale(1.05);
-}
-
-.Running-section {
-  flex: 1;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border: 1px solid #1414f3;
-  padding-right: 10px;
-  padding-top: 10px;
-  margin-left: 20px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
-}
-
+.specific-skill:hover,
+.specific-achievement:hover,
+.Run-Pr-1:hover,
+.lesson-attributes:hover,
+.Races:hover,
+.Resume-section:hover,
 .Running-section:hover {
-  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
-  transform: translateY(5px) scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0px 0px 40px 10px rgba(0,0,0,0.4);
 }
 
 /* =======================
@@ -672,297 +277,48 @@ select.types:focus {
    ======================= */
 footer {
   display: flex;
-  justify-content: space-between;
-  background-color: #ffffff;
-  color:rgb(0, 0, 0);
-  width: 100%;
-  margin: 0;
+  flex-direction: column;
   align-items: center;
-  padding-left: 30px;
+  padding: 1rem;
+  gap: 0.5rem;
+  background-color: #fff;
+  color: #000;
   opacity: 0;
   animation: fadeInSmooth 1s forwards;
-  animation-delay: 2s;
-}
-
-.footer-element {
-  display: flex;
-  padding-right: 30px;
-}
-
-.footer-image {
-  position: relative;
-  display: flex;
 }
 
 .footer-image img {
-  flex: 1;
-  height: 55px;
-  width: 55px;
-  padding-right: 20px;
-  display: inline;
-  cursor: pointer;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
-}
-
-a[href^="mailto:"] {
-  color: inherit;
-  text-decoration: none;
-  outline: none;
+  cursor: pointer;
 }
 
 /* =======================
    KEYFRAMES
    ======================= */
-@keyframes fadeInSmooth {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 88ch; }
-}
-
-@keyframes typing2 {
-  from { width: 0; }
-  to { width: 64ch; }
-}
-
-@keyframes typing3 {
-  from { width: 0; }
-  to { width: 57ch; }
-}
+@keyframes fadeInSmooth { from {opacity:0;} to {opacity:1;} }
+@keyframes typing { from{width:0;} to{width:100%;} }
+@keyframes typing2{ from{width:0;} to{width:100%;} }
+@keyframes typing3{ from{width:0;} to{width:100%;} }
 
 /* =======================
-   ACTIVE PAGE LINK
+   MEDIA QUERIES
    ======================= */
-.active-page a {
-  color: green !important;
-}
-
-/* =======================
-   LIST STYLING
-   ======================= */
-ul {
-  display: block;
-  list-style: disc inside;
-  margin: 1em 0;
-  padding-left: 40px;
-}
-
-li {
-  display: list-item;
-  font-size: 12px;
-  color: gray;
-}
 @media (max-width: 600px) {
-  /* Navbar adjustments */
-  nav.navbar {
-    height: auto;
-    width:100%;
-    flex-wrap: wrap; /* Allow items to stack if needed */
-  }
-
-   body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* full viewport height */
-    margin: 0;
-    font-family: 'Russo One', Arial;
-}
-
-/* Let the content wrapper grow to fill space */
-.content-wrapper {
-    flex: 1; /* fills available space above the footer */
-}
-  nav.navbar li {
-    font-size: 18px;
-    padding: 8px;
-  }
-
-  nav.navbar li.no-shadow {
-    font-size: 28px;
-  }
-
-  /* Intro text adjustments */
+  nav.navbar li { font-size: 1.2rem; padding: 0.25rem; }
+  nav.navbar li.no-shadow { font-size: 1.5rem; }
   .intro-text-stuff1,
   .intro-text-stuff2,
-  .intro-text-stuff3 {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 16px;
-    white-space: normal; /* Allow wrapping */
-    width: auto; /* Fill available space */
-  }
+  .intro-text-stuff3 { font-size: 1rem; white-space: normal; }
+  .button-class { padding: 0.5rem 1rem; font-size: 1rem; }
+}
 
-  /* Button adjustments */
-  .button-class {
-    margin: 30px auto 50px auto; /* Center horizontally with spacing */
-    padding: 12px;
-    font-size: 16px;
-    display: block;
-  }
-
-  /* Title / Name adjustments */
-  .title {
-    font-size: 24px;
-    margin-top: 15px;
-  }
-
-  .name {
-    font-size: 18px;
-    margin-top: 10px;
-  }
-
-  /* Education / Experience adjustments */
-  .graduation,
-  .GPA {
-    margin-left: 0;
-    margin-right: 0;
-    display: block;
-    text-align: left;
-    margin-top: 5px;
-  }
-
-  /* Contact page adjustments */
-  .Contact-images {
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0;
-  }
-
-  .Contact-images img {
-    margin: 10px 0;
-    max-width: 70%; /* prevent overflow */
-    height: auto;
-  }
-
-  /* About page adjustments */
-  .elemental {
-    flex-direction: column;
-    margin: 10px 5px;
-    width: 100%;
-  }
-
-  /* Form adjustments */
-  form {
-    width: 95%;
-    margin: 20px auto;
-    padding: 15px;
-  }
-
-  /* Skills adjustments */
-  .skillset {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .specific-skill {
-    margin: 10px 0;
-    width: 90%;
-    max-width: 350px;
-  }
-
-  /* Running / Achievements / Resume sections */
-  .running-blurb,
-  .running-lessons,
-  .Upcoming-Races,
-  .achievements-style,
-  .Resume-Running {
-    flex-direction: column;
-    margin: 10px 0;
-    width: 100%;
-  }
-
-  .Run-Pr-1,
-  .lesson-attributes,
-  .Races,
-  .specific-achievement,
-  .Resume-section,
-  .Running-section {
-    margin: 10px auto;
-    width: 95%;
-  }
-
-  /* Footer adjustments */
-  footer {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 10px;
-    text-align: center;
-  }
-
-  .footer-element {
-    margin: 5px 0;
-  }
-
-  .footer-image img {
-    margin: 5px 0;
-    width: 50px;
-    height: 50px;
-  }
-} 
-/* Medium devices (tablets, 600px–1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
-  nav.navbar li {
-    font-size: 25px;
-    padding: 12px;
-  }
-
+  nav.navbar li { font-size: 1.5rem; padding: 0.5rem; }
+  nav.navbar li.no-shadow { font-size: 2rem; }
   .intro-text-stuff1,
   .intro-text-stuff2,
-  .intro-text-stuff3 {
-    margin-left: 20px;
-    font-size: 20px;
-  }
-
-  .button-class {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    padding: 18px;
-    font-size: 18px;
-  }
-
-  .title {
-    font-size: 32px;
-  }
-
-  .name {
-    font-size: 22px;
-  }
-
-  .graduation {
-    margin-left: 20px;
-  }
-
-  .GPA {
-    margin-right: 20px;
-  }
-
-  .Contact-images {
-    flex-wrap: wrap;
-    margin-left: 20px;
-  }
-
-  .running-blurb,
-  .running-lessons,
-  .Upcoming-Races,
-  .achievements-style,
-  .Resume-Running {
-    flex-wrap: wrap;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .Run-Pr-1,
-  .lesson-attributes,
-  .Races,
-  .specific-achievement,
-  .Resume-section,
-  .Running-section {
-    width: 45%;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
+  .intro-text-stuff3 { font-size: 1.25rem; }
+  .button-class { padding: 0.75rem 1.5rem; font-size: 1.1rem; }
 }
